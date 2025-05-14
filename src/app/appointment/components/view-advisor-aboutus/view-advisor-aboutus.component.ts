@@ -82,7 +82,7 @@ export class ViewAdvisorAboutusComponent implements OnInit{
     private appointmentApiService: AppointmentApiService,
     private userApiService: UserApiService,
     private reviewApiService: ReviewApiService
-  )
+  ) // Constructor del componente
   {  }
 
   ngOnInit(): void {
