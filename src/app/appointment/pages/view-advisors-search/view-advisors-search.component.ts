@@ -1,3 +1,31 @@
+/**
+ * @component ViewAdvisorsSearchComponent
+ * @description
+ * Componente que permite al criador buscar entre todos los asesores disponibles.
+ * Muestra información básica como nombre completo y ubicación, con filtrado dinámico por nombre.
+ * Permite redireccionar a otras vistas de información o gestión de asesores.
+ *
+ * @features
+ * - Obtiene y muestra la lista completa de asesores
+ * - Filtrado por nombre (solo letras)
+ * - Redirección a:
+ *    - Detalle del asesor
+ *    - Vista de búsqueda
+ *    - Vista de asesores del criador
+ *
+ * @dependencies
+ * - Angular Material (Cards, Toolbar, Input, FormField, Botones)
+ * - Servicios:
+ *    - AdvisorApiService
+ *    - UserApiService
+ * - Angular Router
+ * - Angular Directivas:
+ *    - NgForOf
+ *
+ * @author Nadia Lucas
+ * @created 2025-05-14
+ */
+
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 

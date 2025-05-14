@@ -1,3 +1,31 @@
+/**
+ * @component ViewMyAdvisorsComponent
+ * @description
+ * Componente que permite a un criador visualizar la lista de asesores con los que ha tenido citas.
+ * Filtra aquellos asesores que tengan citas activas sin reseña y permite acceder a la sección de reseñas.
+ *
+ * @features
+ * - Obtiene el ID del criador autenticado
+ * - Lista asesores con citas relacionadas al criador
+ * - Filtra asesores según nombre
+ * - Muestra únicamente las citas no reseñadas por asesor
+ * - Redirecciona a la vista de reseña
+ * - Maneja mensajes cuando todos los asesores han sido reseñados
+ *
+ * @dependencies
+ * - Angular Material (Botones, Cards, Inputs)
+ * - Servicios:
+ *    - BreederApiService
+ *    - AdvisorApiService
+ *    - AppointmentApiService
+ *    - UserApiService
+ *    - ReviewApiService
+ * - Angular Router
+ *
+ * @author Nadia Lucas
+ * @created 2025-05-10
+ */
+
 import { Component, OnInit } from '@angular/core';
 import {MatButton} from "@angular/material/button";
 import {MatFormField, MatLabel} from "@angular/material/form-field";
