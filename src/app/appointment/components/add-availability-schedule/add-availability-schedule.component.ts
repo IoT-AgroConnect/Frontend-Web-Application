@@ -30,7 +30,7 @@
  * - Redirecciona a `/asesor/horarios` después de una creación exitosa
  *
  * @author
- * Nadia Lucas
+ * Juan Cuadros
  * @created
  * 2025-05-14
  */
