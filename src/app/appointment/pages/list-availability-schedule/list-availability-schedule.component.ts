@@ -1,3 +1,34 @@
+/**
+ * @component ListAvailabilityScheduleComponent
+ * @description
+ * Componente que permite al asesor listar todos sus horarios disponibles registrados en la plataforma.
+ * También permite eliminar un horario con confirmación previa, notificando al usuario mediante un `SnackBar`.
+ *
+ * @features
+ * - Obtiene horarios disponibles activos del asesor autenticado
+ * - Muestra los datos formateados (fecha, hora de inicio y fin)
+ * - Elimina un horario luego de confirmar mediante diálogo
+ * - Muestra notificaciones de éxito o error con `MatSnackBar`
+ *
+ * @dependencies
+ * - Services:
+ *    - AvailableDateApiService
+ *    - AdvisorApiService
+ * - Components:
+ *    - EmptyViewComponent
+ *    - ConfirmationDialogComponent
+ * - Angular Material:
+ *    - MatCard
+ *    - MatButton
+ *    - MatSnackBar
+ *    - MatDialog
+ * - Angular Directivas:
+ *    - NgIf, NgForOf, RouterLink
+ *
+ * @author Nadia Lucas
+ * @created 2025-05-14
+ */
+
 import {Component, OnInit} from '@angular/core';
 import {RouterLink} from "@angular/router";
 import {AvailableDate} from "../../models/available_date.model";
