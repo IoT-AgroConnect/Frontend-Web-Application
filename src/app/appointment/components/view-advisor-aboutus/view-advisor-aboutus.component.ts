@@ -90,7 +90,7 @@ export class ViewAdvisorAboutusComponent implements OnInit{
     this.getAdvisor();
   }
 
-  getAdvisor(): void {
+  getAdvisor(): void { // Método para obtener la información del asesor
     this.advisorApiService.getOne(this.id).subscribe(advisor => {
       this.advisor = advisor
       this.advisorDetails = {
