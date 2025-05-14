@@ -87,6 +87,8 @@ export class AnimalInformationComponent implements OnInit{
       )
   }
 
+   // Al guardar los cambios, se valida primero que la jaula ingresada exista en el listado de jaulas del criador actual.
+  // Esto evita asignar animales a jaulas inexistentes.
   onSubmit() {
     if (this.animalForm.valid) {
       this.breederService.getCagesByBreederId(this.breederService.getBreederId()).subscribe(cages => {
