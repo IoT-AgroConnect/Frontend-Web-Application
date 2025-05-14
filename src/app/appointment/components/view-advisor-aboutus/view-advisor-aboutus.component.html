@@ -1,4 +1,5 @@
 
+<!-- Botón de retroceso estilizado con ícono y navegación hacia la página anterior -->
 <button mat-raised-button class="back-button" style="background-color: #DD763D;border-radius: 35px; color:white; font-size: 20px; z-index: 0;" (click)="goBack()">&#8592;</button>
 
 <div class="container" *ngIf="advisor">
@@ -24,6 +25,7 @@
       </mat-card-header>
 
       <mat-card-content>
+        <!-- Sección de visualización de información detallada del asesor, incluyendo nombre, ubicación, ocupación, experiencia y descripción -->
         <h3>
           <strong>Ubicación: </strong>{{ advisorDetails.location }}
           <br>
@@ -34,6 +36,7 @@
           <strong>Descripción: </strong><br>{{ advisorDetails.description }}
         </h3>
 
+<!-- Sección de visualización dinámica de la calificación promedio del asesor mediante estrellas animadas -->
         <div class="container-stars">
           <h2>
           <span class="stars" *ngFor="let i of [].constructor(advisor.rating); let idx = index" [style.animation-delay]="idx * 0.2 + 's'">&#9733;</span>
