@@ -7,6 +7,30 @@ import {MatButton} from "@angular/material/button";
 import {DatePipe} from "@angular/common";
 import {MatSnackBar} from "@angular/material/snack-bar";
 
+/**
+ * @component PublicationDetailComponent
+ * @description
+ * Componente que muestra los detalles de una publicación seleccionada y permite su eliminación tras confirmar la acción.
+ * Este componente se utiliza para visualizar una publicación específica y tiene un mecanismo de confirmación antes de realizar la eliminación.
+ *
+ * @features
+ * - Muestra los detalles de la publicación seleccionada
+ * - Permite al usuario eliminar la publicación con confirmación
+ * - Utiliza un diálogo de confirmación para la eliminación
+ * - Muestra un mensaje de éxito o error después de la eliminación
+ * - Redirige al usuario de vuelta a la página anterior tras la eliminación exitosa
+ *
+ * @dependencies
+ * - Services:
+ *    - PublicationsApiService
+ * - Librerías externas:
+ *    - Angular Material Dialog, Button, Card, SnackBar, Icon
+ * - Componentes reutilizables:
+ *    - ConfirmationDialogComponent
+ *
+ * @author Fiorella Jarama
+ * @created 2025-05-14
+ */
 // Import the ConfirmationDialogComponent
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmationDialogComponent } from "../../../public/components/confirmation-dialog/confirmation-dialog.component";
