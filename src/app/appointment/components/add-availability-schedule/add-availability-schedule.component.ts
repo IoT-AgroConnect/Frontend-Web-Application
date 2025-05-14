@@ -142,7 +142,8 @@ export class AddAvailabilityScheduleComponent implements OnInit{
     }
     return null;
   }
-  validDateValidator(formGroup: FormGroup) {
+  validDateValidator(formGroup: FormGroup) { // Validate date
+    // Get the date control from the form group
     const dateControl = formGroup.get('date');
     if (dateControl) {
       const controlDate = new Date(dateControl.value);
