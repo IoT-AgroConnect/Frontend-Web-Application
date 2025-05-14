@@ -9,6 +9,33 @@ import {PublicationCardComponent} from "../../components/publication-card/public
 import {AdvisorApiService} from "../../../user/services/advisor-api.service";
 import {EmptyViewComponent} from "../../../public/components/empty-view/empty-view.component";
 
+/**
+ * @component MyPublicationsComponent
+ * @description
+ * Componente encargado de mostrar todas las publicaciones creadas por el asesor actualmente autenticado.
+ * Permite visualizar la lista de publicaciones en formato de tarjetas y redirigir a la vista de creación de nuevas publicaciones.
+ *
+ * @features
+ * - Obtiene el ID del asesor desde el servicio de autenticación
+ * - Consulta las publicaciones asociadas al asesor
+ * - Renderiza una lista de tarjetas de publicaciones usando `PublicationCardComponent`
+ * - Muestra una vista vacía si no hay publicaciones disponibles
+ * - Redirige a la vista de creación de publicación
+ *
+ * @dependencies
+ * - Services:
+ *    - PublicationsApiService
+ *    - AdvisorApiService
+ * - Librerías externas:
+ *    - Angular Material Button
+ *    - Angular Router
+ * - Componentes reutilizables:
+ *    - PublicationCardComponent
+ *    - EmptyViewComponent
+ *
+ * @author Fiorella Jarama
+ * @created 2025-05-14
+ */
 @Component({
   selector: 'app-my-publications',
   standalone: true,

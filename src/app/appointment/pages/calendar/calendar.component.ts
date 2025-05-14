@@ -15,6 +15,35 @@ import {Advisor} from "../../../user/models/advisor.model";
 import {Breeder} from "../../../user/models/breeder.model";
 import {forkJoin, map, Observable, switchMap, window} from "rxjs";
 
+/**
+ * @component CalendarComponent
+ * @description
+ * Componente de calendario que muestra las citas agendadas de un criador o asesor,
+ * filtrando únicamente aquellas con estado "Pendiente". Utiliza la librería FullCalendar.
+ *
+ * @features
+ * - Determina dinámicamente el tipo de usuario (criador o asesor) según la URL
+ * - Obtiene y renderiza las citas pendientes correspondientes al usuario
+ * - Muestra detalles personalizados de cada cita (nombre del otro usuario y hora)
+ * - Adapta el contenido del evento al calendario usando un template HTML
+ *
+ * @dependencies
+ * - Servicios:
+ *    - AppointmentApiService
+ *    - AdvisorApiService
+ *    - BreederApiService
+ * - Modelos:
+ *    - Appointment
+ *    - Advisor
+ *    - Breeder
+ * - Librerías:
+ *    - @fullcalendar/angular
+ *    - @fullcalendar/daygrid
+ *    - @angular/material/card
+ *
+ * @author Fiorella Jarama
+ * @created 2025-05-14
+ */
 @Component({
   selector: 'app-calendar',
   standalone: true,

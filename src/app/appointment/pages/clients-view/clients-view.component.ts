@@ -7,7 +7,33 @@ import {BreederApiService} from "../../../user/services/breeder-api.service";
 import {AppointmentApiService} from "../../services/appointment-api.service";
 import {AdvisorApiService} from "../../../user/services/advisor-api.service";
 import {EmptyViewComponent} from "../../../public/components/empty-view/empty-view.component";
-
+/**
+ * @component ClientsViewComponent
+ * @description
+ * Componente que muestra una lista de clientes (criadores) asociados a las citas
+ * de un asesor. Cada cliente se representa mediante una tarjeta visual.
+ *
+ * @features
+ * - Obtiene el ID del asesor autenticado
+ * - Recupera todas las citas del asesor
+ * - Mapea los criadores asociados a esas citas como clientes
+ * - Renderiza una vista con tarjetas de cliente o una vista vacía si no hay datos
+ *
+ * @dependencies
+ * - Servicios:
+ *    - AdvisorApiService
+ *    - BreederApiService
+ *    - AppointmentApiService
+ * - Modelos:
+ *    - Appointment
+ *    - Client
+ * - Componentes:
+ *    - ClientCardComponent
+ *    - EmptyViewComponent
+ *
+ * @author Fiorella Jarama
+ * @created 2025-05-14
+ */
 @Component({
   selector: 'app-clients-view',
   standalone: true,

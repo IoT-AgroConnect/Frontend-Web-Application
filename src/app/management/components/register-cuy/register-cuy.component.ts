@@ -16,6 +16,37 @@ import {MatSelect} from "@angular/material/select";
 import {MatIcon} from "@angular/material/icon";
 import {BreederApiService} from "../../../user/services/breeder-api.service";
 
+/**
+ * @component RegisterCuyComponent
+ * @description
+ * Componente de formulario para registrar un nuevo cuy (animal).
+ * Recoge información básica como nombre, raza, peso, género, estado de salud, etc.,
+ * y realiza validaciones antes de enviar la información al backend.
+ *
+ * @features
+ * - Permite registrar un cuy vinculado a una jaula específica
+ * - Muestra un diálogo si faltan campos requeridos
+ * - Verifica si la jaula existe para el criador actual antes de registrar
+ * - Muestra mensajes de éxito o error mediante `MatSnackBar`
+ *
+ * @dependencies
+ * - Angular Material:
+ *    - MatButton, MatInputModule, MatFormFieldModule, MatDialog, MatSnackBar,
+ *      MatRadioGroup, MatRadioButton, MatOption, MatSelect, MatIcon
+ * - Angular:
+ *    - FormsModule, CommonModule, RouterLink, ActivatedRoute
+ * - Services:
+ *    - AnimalApiService
+ *    - BreederApiService
+ * - Components:
+ *    - DialogComponent (para mostrar errores de validación)
+ *
+ * @model
+ * - Animal
+ *
+ * @author Fiorella Jarama
+ * @created 2025-05-14
+ */
 @Component({
   selector: 'app-register-cuy',
   standalone: true,
