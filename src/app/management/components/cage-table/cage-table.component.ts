@@ -6,25 +6,23 @@ import { MatIcon } from "@angular/material/icon";
 
 /**
  * @component CageTableComponent
- * @description
- * Componente de presentación que muestra una tabla informativa sobre las jaulas.
- * Permite al usuario editar, eliminar o navegar a la vista detallada de una jaula seleccionada.
- *
+ * @description Componente para mostrar una tabla con información de jaulas.
  * @features
- * - Recibe un objeto `MatTableDataSource` como entrada y lo muestra usando una tabla (`mat-table`)
- * - Permite paginación mediante `MatPaginator`
- * - Emitir eventos para editar, eliminar o navegar a la vista detallada de una jaula
- *
+ * - Paginación integrada para navegar entre jaulas.
+ * - Permite redireccionar a edición, visualización o eliminación.
  * @dependencies
- * - Angular Material:
- *    - MatButton
- *    - MatTableModule
- *    - MatPaginator
- *    - MatIcon
- *
- * @author Fiorella Jarama
+ * - Angular Material Table, Button, Paginator, Icon
+ * @inputs
+ * - dataSource: listado de jaulas.
+ * @outputs
+ * - editCage: emite ID para editar jaula.
+ * - deleteCage: emite ID para eliminar jaula.
+ * - goToCage: emite ID para visualizar detalles de jaula.
+ * @author Johan Moreno
  * @created 2025-05-14
  */
+
+
 @Component({
   selector: 'cage-table',
   standalone: true,
