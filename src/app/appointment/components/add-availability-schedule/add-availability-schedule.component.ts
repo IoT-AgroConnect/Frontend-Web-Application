@@ -89,7 +89,7 @@ export class AddAvailabilityScheduleComponent implements OnInit{
     }, { validators: [this.validTimeValidator, this.validDateValidator] });
   }
 
-  addAvailableDate() {
+  addAvailableDate() { // Method to add available date
     let formattedDate = this.form.get('date')?.value;
 
     let startTimeParts = this.form.get('startTime')?.value.split(':');
