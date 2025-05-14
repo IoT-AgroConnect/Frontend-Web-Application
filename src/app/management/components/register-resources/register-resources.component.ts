@@ -15,6 +15,22 @@ import { MatSelect } from '@angular/material/select';
 import {BreederApiService} from "../../../user/services/breeder-api.service";
 import {MatIcon} from "@angular/material/icon";
 
+/**
+ * @component RegisterResourcesComponent
+ * @description Componente para registrar nuevos recursos (alimentos, medicinas, cultivos, etc.) para la granja.
+ * @features
+ * - Formulario con validación.
+ * - Almacena nombre, tipo, cantidad, fecha y observaciones.
+ * - Manejo de errores y snackbars para retroalimentación al usuario.
+ * @dependencies
+ * - Angular Material: Button, Input, FormField, Dialog, Radio, Select
+ * - Servicios: ResourceApiService, BreederApiService
+ * - Componente: DialogComponent (validación modal)
+ * @author Johan Moreno
+ * @created 2025-05-14
+ */
+
+
 @Component({
   selector: 'app-register-resources',
   standalone: true,
