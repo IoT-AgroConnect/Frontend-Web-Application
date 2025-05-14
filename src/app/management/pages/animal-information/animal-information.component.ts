@@ -72,6 +72,8 @@ export class AnimalInformationComponent implements OnInit{
     this.getAnimal();
   }
 
+// Al obtener los datos del animal, también se transforman los valores booleanos de `gender` e `isSick` a strings.
+// Esto permite que los controles del formulario (selects) se sincronicen correctamente con los valores esperados en la interfaz.
   getAnimal() {
     this.animalService.getOne(this.animalID)
       .subscribe(
