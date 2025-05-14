@@ -41,7 +41,7 @@ import {BaseService} from "../../shared/services/base.service";
 import {AvailableDate} from "../models/available_date.model";
 import {Observable} from "rxjs";
 
-@Injectable({
+@Injectable({ // This service is provided in the root injector, making it a singleton service
   providedIn: 'root'
 })
 export class AvailableDateApiService extends BaseService<AvailableDate>{
