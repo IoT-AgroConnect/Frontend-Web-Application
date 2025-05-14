@@ -26,7 +26,7 @@
  * this.availableDateApiService.create(newDate).subscribe(...);
  *
  * @author
- * Nadia Lucas
+ * Juan Cuadros
  * @created
  * 2025-05-14
  */
@@ -44,8 +44,8 @@ import {Observable} from "rxjs";
 @Injectable({
   providedIn: 'root'
 })
-export class AvailableDateApiService extends BaseService<AvailableDate>{
-  constructor(http: HttpClient) {
+export class AvailableDateApiService extends BaseService<AvailableDate>{ // Inherit from BaseService<AvailableDate>
+  constructor(http: HttpClient) { // Inject HttpClient into the constructor
     super(http);
     this.extraUrl = environment.availableDateURL;
   }
