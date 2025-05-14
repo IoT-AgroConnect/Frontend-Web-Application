@@ -24,6 +24,33 @@ import {AvailableDateApiService} from "../../services/available-date-api.service
 import {NgForOf, DatePipe, NgIf} from "@angular/common";
 import {MatSnackBar} from "@angular/material/snack-bar";
 
+/**
+ * @component ViewReserveAppointmentComponent
+ * @description
+ * Componente que permite a un criador visualizar los horarios disponibles de un asesor
+ * y reservar una cita. Se encarga de gestionar el proceso completo: desde obtener los datos
+ * del asesor y sus fechas disponibles, hasta crear la cita y actualizar el estado del horario.
+ *
+ * @features
+ * - Carga los datos del asesor y sus fechas disponibles
+ * - Permite seleccionar un horario para agendar una cita
+ * - Crea una cita asociada al asesor y al criador
+ * - Actualiza el estado de disponibilidad del horario seleccionado
+ * - Notifica al usuario sobre el éxito o fallo de la operación
+ *
+ * @dependencies
+ * - Angular Material:
+ *   - MatCardModule, MatToolbarModule, MatFormFieldModule, MatButtonModule, MatInputModule, MatRadioModule, MatSnackBar
+ * - Angular:
+ *   - Router, ActivatedRoute, CommonModule (NgIf, NgForOf), DatePipe
+ * - Servicios:
+ *   - AdvisorApiService, BreederApiService, AppointmentApiService, AvailableDateApiService
+ * - Modelos:
+ *   - Advisor, AvailableDate, Breeder, Appointment
+ *
+ * @author Fiorella Jarama
+ * @created 2025-05-14
+ */
 @Component({
   selector: 'app-view-reserve-appointment',
   standalone: true,
