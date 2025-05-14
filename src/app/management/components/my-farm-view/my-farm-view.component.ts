@@ -5,6 +5,13 @@ import { Router } from '@angular/router';
 import {HeaderComponent} from "../../../public/components/header/header.component";
 import {SidenavComponent} from "../../../public/components/sidenav/sidenav.component";
 
+/**
+ * This class represents the component for the farm view dashboard.
+ * @author Johan Moreno Vergara - U20201C105
+ * @version 1.0
+ */
+
+
 @Component({
   selector: 'app-my-farm-view',
   standalone: true,

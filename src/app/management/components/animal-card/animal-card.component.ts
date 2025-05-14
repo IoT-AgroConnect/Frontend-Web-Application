@@ -6,6 +6,21 @@ import {NgClass} from "@angular/common";
 
 /**
  * @component AnimalCardComponent
+ * @description Muestra información de un cuy registrado.
+ * @features
+ * - Visualiza nombre, raza y atributos del animal.
+ * - Permite acceder a información detallada del cuy.
+ * @dependencies
+ * - Angular Material Card, Router, Common
+ * @inputs
+ * - animal: objeto con la información del cuy.
+ * @author Johan Moreno
+ * @created 2025-05-14
+ */
+
+
+/**
+ * @component AnimalCardComponent
  * @description
  * Componente de presentación que muestra una tarjeta informativa sobre un animal.
  * Permite al usuario navegar a una vista detallada del animal seleccionado.
