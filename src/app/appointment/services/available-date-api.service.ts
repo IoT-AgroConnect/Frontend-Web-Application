@@ -26,7 +26,7 @@
  * this.availableDateApiService.create(newDate).subscribe(...);
  *
  * @author
- * Juan Cuadros
+ * Nadia Lucas
  * @created
  * 2025-05-14
  */
@@ -41,10 +41,10 @@ import {BaseService} from "../../shared/services/base.service";
 import {AvailableDate} from "../models/available_date.model";
 import {Observable} from "rxjs";
 
-@Injectable({ // This service is provided in the root injector, making it a singleton service
+@Injectable({
   providedIn: 'root'
 })
-export class AvailableDateApiService extends BaseService<AvailableDate>{ // This service extends the BaseService with the type AvailableDate
+export class AvailableDateApiService extends BaseService<AvailableDate>{
   constructor(http: HttpClient) {
     super(http);
     this.extraUrl = environment.availableDateURL;
