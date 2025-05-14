@@ -1,3 +1,33 @@
+/**
+ * @component AdvisorInfoComponent
+ * @description
+ * Componente encargado de mostrar la información detallada de un asesor.
+ * Esta vista permite visualizar datos clave del asesor, como nombre, especialidad,
+ * contacto u otra información relevante.
+ *
+ * @features
+ * - Renderizado de los datos de un asesor específico
+ * - Integración con servicios de usuario para obtener la información
+ * - Estructura de presentación limpia y responsive
+ *
+ * @dependencies
+ * - Angular Material Card, Typography, Icon
+ * - Servicios:
+ *    - AdvisorService
+ * - Angular Directivas:
+ *    - NgIf, NgFor
+ *
+ * @inputs
+ * - `advisorId`: ID del asesor que se desea visualizar
+ *
+ * @example
+ * <app-advisor-info [advisorId]="123"></app-advisor-info>
+ *
+ * @author
+ * Juan Cuadros
+ * @created
+ * 2025-05-14
+ */
 import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
 
