@@ -19,6 +19,22 @@ import { Observable } from "rxjs";
 import { BreederApiService } from "../../../user/services/breeder-api.service";
 import { ExpenseApiService } from "../../services/expense-api.service"; // Asumiendo que existe este servicio
 
+/**
+ * @component MyFarmExpensesManagementComponent
+ * @description Componente para la gestión de gastos registrados por el criador, permitiendo su visualización, filtrado y eliminación.
+ * @features
+ * - Visualiza los gastos por tipo.
+ * - Elimina gastos con confirmación por diálogo.
+ * - Redirección para editar gastos existentes.
+ * @dependencies
+ * - Angular Material: Card, Button, Icon, Radio, Input, Dialog
+ * - Servicios: BreederApiService, ExpenseApiService
+ * - Componentes: HeaderComponent, SidenavComponent, EmptyViewComponent, ConfirmationDialogComponent
+ * @author Johan Moreno
+ * @created 2025-05-14
+ */
+
+
 @Component({
   selector: 'app-my-farm-expenses-management',
   standalone: true,
