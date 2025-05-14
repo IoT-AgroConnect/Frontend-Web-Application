@@ -1,3 +1,33 @@
+/**
+ * @component NotificationsViewComponent
+ * @description
+ * Componente que permite a los asesores visualizar sus notificaciones.
+ * Incluye funcionalidades para acceder a reuniones (si aplica) y eliminar notificaciones individuales.
+ *
+ * @features
+ * - Obtiene notificaciones del usuario autenticado
+ * - Formatea las fechas de notificación en formato legible (localizado en español)
+ * - Permite abrir enlaces de reuniones asociadas a una notificación
+ * - Permite eliminar notificaciones con feedback en consola
+ *
+ * @dependencies
+ * - Services:
+ *    - NotificationApiService
+ *    - UserApiService
+ * - Components:
+ *    - HeaderComponent
+ *    - SidenavComponent
+ *    - EmptyViewComponent
+ * - Angular Material:
+ *    - MatCardModule, MatButton, MatRadioModule, MatIconModule
+ * - Angular Common:
+ *    - CommonModule, FormsModule, HttpClientModule
+ *
+ * @author Nadia Lucas
+ * @created 2025-05-14
+ */
+
+
 import {Component, OnInit} from '@angular/core';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatButton } from "@angular/material/button";
