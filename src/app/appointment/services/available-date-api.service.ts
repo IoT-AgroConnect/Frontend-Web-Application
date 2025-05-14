@@ -44,7 +44,7 @@ import {Observable} from "rxjs";
 @Injectable({ // This service is provided in the root injector, making it a singleton service
   providedIn: 'root'
 })
-export class AvailableDateApiService extends BaseService<AvailableDate>{
+export class AvailableDateApiService extends BaseService<AvailableDate>{ // This service extends the BaseService with the type AvailableDate
   constructor(http: HttpClient) {
     super(http);
     this.extraUrl = environment.availableDateURL;
