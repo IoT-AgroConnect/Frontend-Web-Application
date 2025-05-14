@@ -13,6 +13,13 @@ import {CageApiService} from "../../services/cage-api.service";
 import {BreederApiService} from "../../../user/services/breeder-api.service";
 import {MatIcon} from "@angular/material/icon";
 
+/**
+ * This class represents the component for the cage registration form.
+ * Allows criadores to register new cages for their guinea pigs.
+ * @author Johan Moreno Vergara - U20201C105
+ * @version 1.0
+ */
+
 
 @Component({
   selector: 'app-register-cage',
