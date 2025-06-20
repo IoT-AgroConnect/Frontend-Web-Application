@@ -99,4 +99,8 @@ export class CageListComponent implements OnInit {
   goToCage(id: number){
     this.router.navigate([`criador/mis-animales/${id}`]);
   }
+  goToIoTMonitoring(cageId: number): void {
+    this.router.navigate([`/criador/monitoreo-iot/${cageId}`]);
+  }
+
 }

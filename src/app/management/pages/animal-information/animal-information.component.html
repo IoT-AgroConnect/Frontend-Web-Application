@@ -5,11 +5,11 @@
 
   <!-- Contenedor principal del formulario -->
   <div class="form-container">
-    
+
     <!-- Sección superior con imagen y botón de retroceso -->
     <div class="return">
       <img src="https://firebasestorage.googleapis.com/v0/b/agroconnect-demo.appspot.com/o/images%2Fcuy.png?alt=media&token=0d551f4d-f295-4dfa-bd22-74dd0bd16359" alt="cuy {{animal.id}}">
-      
+
       <!-- Botón para regresar a la vista anterior -->
       <button mat-raised-button class="back-button" style="background-color: #e19669; color: white;" aria-label="Boton de retroceso" (click)="goBack()">
         <mat-icon aria-label="flecha de retroceso">arrow_back</mat-icon>
@@ -92,21 +92,19 @@
         <div class="buttons">
 
           <!-- Botones para modo edición -->
-          @if(isEditMode){
-            <div class="edit-buttons">
-              <button mat-raised-button style="padding: 20px; background-color: #e19669; color: white;" type="button" aria-label="Descartar cambios" (click)="onCancel()">
-                <mat-icon>close</mat-icon>
-                Descartar
-              </button>
-              <button mat-raised-button style="background-color: #7ec306; color: white;" type="submit" aria-label="Guardar">
-                <mat-icon>save</mat-icon>
-                Guardar
-              </button>
-            </div>
-          }
+          <div *ngIf="isEditMode; else normalView" class="edit-buttons">
+            <button mat-raised-button style="padding: 20px; background-color: #e19669; color: white;" type="button" aria-label="Descartar cambios" (click)="onCancel()">
+              <mat-icon>close</mat-icon>
+              Descartar
+            </button>
+            <button mat-raised-button style="background-color: #7ec306; color: white;" type="submit" aria-label="Guardar">
+              <mat-icon>save</mat-icon>
+              Guardar
+            </button>
+          </div>
 
           <!-- Botones para vista normal -->
-          @else {
+          <ng-template #normalView>
             <button mat-raised-button style="padding: 20px; background-color: #7ec306; color: white;" type="button" aria-label="Editar información" (click)="editAnimal()">
               <mat-icon>edit</mat-icon>
               Editar
@@ -115,7 +113,8 @@
               <mat-icon>delete</mat-icon>
               Eliminar
             </button>
-          }
+          </ng-template>
+
         </div>
       </form>
     </div>

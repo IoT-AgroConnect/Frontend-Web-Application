@@ -76,5 +76,10 @@ export const routes: Routes = [
   {path: 'criador/calendario', component: CalendarComponent},
   {path: 'asesor/calendario', component: CalendarComponent},
   {path: 'asesor/horarios', component: ListAvailabilityScheduleComponent},
-  {path: 'asesor/horarios/agregar', component: AddAvailabilityScheduleComponent}
+  {path: 'asesor/horarios/agregar', component: AddAvailabilityScheduleComponent},
+  {
+    path: 'criador/monitoreo-iot/:id',
+    loadComponent: () => import('./management/pages/iot-monitoring/iot-monitoring.component')
+      .then(m => m.IotMonitoringComponent),
+  },
 ];
