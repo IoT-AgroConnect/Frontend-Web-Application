@@ -9,7 +9,8 @@ export const environment = {
     messagingSenderId: "981172916098",
     appId: "1:981172916098:web:1b8a0e8e722615fe7a499b"
   },
-    baseURL: 'https://web-services-18bk.onrender.com/api/v1',
+    //baseURL: 'https://backend-web-services-jo4d.onrender.com/api/v1',
+      baseURL: 'http://localhost:8080/api/v1',
 
     //urls for the different endpoints
     userURL: '/users',

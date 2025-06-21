@@ -83,6 +83,8 @@ export class SidenavComponent {
         return this.isBreeder ? "criador/calendario" : "asesor/calendario";
       case "Horarios":
         return "asesor/horarios";
+      //case "Jaulas":
+      //  return "criador/jaulas";
       default:
         return "/";
     }

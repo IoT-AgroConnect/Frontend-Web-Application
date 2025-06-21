@@ -17,6 +17,7 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 import {MatIcon} from "@angular/material/icon";
 import {MatOption, MatSelect} from "@angular/material/select";
 import {BreederApiService} from "../../../user/services/breeder-api.service";
+import { CommonModule } from '@angular/common';
 
 
 @Component({
@@ -33,7 +34,8 @@ import {BreederApiService} from "../../../user/services/breeder-api.service";
     MatIcon,
     MatSelect,
     MatOption,
-    NgIf
+    NgIf,
+    CommonModule
   ],
   templateUrl: './animal-information.component.html',
   styleUrl: './animal-information.component.css'
@@ -72,6 +74,8 @@ export class AnimalInformationComponent implements OnInit{
     this.getAnimal();
   }
 
+// Al obtener los datos del animal, también se transforman los valores booleanos de `gender` e `isSick` a strings.
+// Esto permite que los controles del formulario (selects) se sincronicen correctamente con los valores esperados en la interfaz.
   getAnimal() {
     this.animalService.getOne(this.animalID)
       .subscribe(
@@ -87,6 +91,8 @@ export class AnimalInformationComponent implements OnInit{
       )
   }
 
+   // Al guardar los cambios, se valida primero que la jaula ingresada exista en el listado de jaulas del criador actual.
+  // Esto evita asignar animales a jaulas inexistentes.
   onSubmit() {
     if (this.animalForm.valid) {
       this.breederService.getCagesByBreederId(this.breederService.getBreederId()).subscribe(cages => {

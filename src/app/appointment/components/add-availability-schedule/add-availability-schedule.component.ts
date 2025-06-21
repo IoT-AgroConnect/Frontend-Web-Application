@@ -1,3 +1,40 @@
+/**
+ * @component AddAvailabilityScheduleComponent
+ * @description
+ * Componente para agregar un nuevo horario de disponibilidad para un asesor.
+ * Permite al asesor registrar una fecha, hora de inicio y hora de fin para ofrecer atención.
+ * Valida que la fecha no sea pasada y que la hora de inicio sea anterior a la hora de fin.
+ *
+ * @features
+ * - Formulario reactivo para registrar disponibilidad (fecha, hora de inicio y fin)
+ * - Validación personalizada de fecha y hora
+ * - Almacenamiento de datos a través del servicio AvailableDateApiService
+ * - Notificaciones de éxito/error con MatSnackBar
+ * - Redirección automática al listado de horarios disponibles
+ *
+ * @dependencies
+ * - Angular Material:
+ *    - MatFormField, MatInput, MatButton, MatError, MatLabel, MatIcon, MatSnackBar
+ * - Angular Forms:
+ *    - ReactiveFormsModule, FormBuilder, Validators
+ * - Angular Router:
+ *    - Router, RouterLink
+ * - Servicios:
+ *    - AvailableDateApiService
+ *    - AdvisorApiService
+ * - Modelos:
+ *    - AvailableDate
+ *    - Publication (importado pero no utilizado aquí)
+ *
+ * @routes
+ * - Redirecciona a `/asesor/horarios` después de una creación exitosa
+ *
+ * @author
+ * Juan Cuadros
+ * @created
+ * 2025-05-14
+ */
+
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatError, MatFormField, MatLabel} from "@angular/material/form-field";
 import {MatButton} from "@angular/material/button";
@@ -52,7 +89,7 @@ export class AddAvailabilityScheduleComponent implements OnInit{
     }, { validators: [this.validTimeValidator, this.validDateValidator] });
   }
 
-  addAvailableDate() {
+  addAvailableDate() { // Method to add available date
     let formattedDate = this.form.get('date')?.value;
 
     let startTimeParts = this.form.get('startTime')?.value.split(':');
@@ -105,7 +142,8 @@ export class AddAvailabilityScheduleComponent implements OnInit{
     }
     return null;
   }
-  validDateValidator(formGroup: FormGroup) {
+  validDateValidator(formGroup: FormGroup) { // Validate date
+    // Get the date control from the form group
     const dateControl = formGroup.get('date');
     if (dateControl) {
       const controlDate = new Date(dateControl.value);

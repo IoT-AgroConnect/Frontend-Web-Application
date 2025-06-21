@@ -1,16 +1,37 @@
 <div class="container">
+  <!-- Título principal de la vista -->
   <h1>Listado de Jaulas</h1>
+
+  <!-- Sección que muestra un mensaje si no hay jaulas registradas -->
   <div class="no-cages" *ngIf="length === 0">
     <h2>No se han encontrado jaulas</h2>
   </div>
-  <cage-table *ngIf="length > 0" [dataSource]="dataSource" (editCage)="editCage($event)" (deleteCage)="deleteCage($event)" (goToCage)="goToCage($event)"></cage-table>
+
+  <!-- Tabla que muestra la lista de jaulas si existen registros -->
+  <!-- Se pasan eventos para editar, eliminar e ir al detalle de una jaula -->
+  <cage-table
+    *ngIf="length > 0"
+    [dataSource]="dataSource"
+    (editCage)="editCage($event)"
+    (deleteCage)="deleteCage($event)"
+    (goToCage)="goToCage($event)"
+    (goToMonitoring)="goToIoTMonitoring($event)">
+  </cage-table>
+
+  <!-- Botón para registrar una nueva jaula -->
   <div class="button-container">
     <button mat-raised-button routerLink="/criador/registro/jaula">
       <mat-icon>add</mat-icon>
       Nueva jaula
     </button>
   </div>
+
+  <!-- Imagen decorativa que acompaña el listado -->
   <div class="image">
-    <img src="https://firebasestorage.googleapis.com/v0/b/agroconnect-demo.appspot.com/o/images%2Fcuy-listado.png?alt=media&token=e92dc95e-33c5-4d72-b816-b474ff512104" alt="Cage list image">
+    <img
+      src="https://firebasestorage.googleapis.com/v0/b/agroconnect-demo.appspot.com/o/images%2Fcuy-listado.png?alt=media&token=e92dc95e-33c5-4d72-b816-b474ff512104"
+      alt="Cage list image">
   </div>
+
+
 </div>

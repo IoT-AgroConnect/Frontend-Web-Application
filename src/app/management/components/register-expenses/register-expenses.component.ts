@@ -14,6 +14,22 @@ import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
 import {BreederApiService} from "../../../user/services/breeder-api.service";
 import {MatIcon} from "@angular/material/icon";
 
+/**
+ * @component RegisterExpensesComponent
+ * @description Componente para registrar nuevos gastos vinculados a la granja del criador.
+ * @features
+ * - Registro con validaciones para tipo, monto y fecha.
+ * - Muestra Snackbar de éxito o error.
+ * - Verifica campos obligatorios con diálogo informativo.
+ * @dependencies
+ * - Angular Material: Input, Button, FormField, Radio, Icon, Dialog, Snackbar
+ * - Servicios: ExpenseApiService, BreederApiService
+ * - Componentes: DialogComponent
+ * @author Johan Moreno
+ * @created 2025-05-14
+ */
+
+
 @Component({
   selector: 'app-register-expenses',
   standalone: true,

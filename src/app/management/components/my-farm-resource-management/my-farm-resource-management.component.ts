@@ -23,6 +23,22 @@ import { ConfirmationDialogComponent } from "../../../public/components/confirma
 import { Observable } from "rxjs";
 import {BreederApiService} from "../../../user/services/breeder-api.service";
 
+/**
+ * @component MyFarmResourceManagementComponent
+ * @description Componente para visualizar, filtrar, editar y eliminar recursos de la granja del criador.
+ * @features
+ * - Visualiza todos los recursos registrados por el criador.
+ * - Filtra por tipo de recurso (alimento, medicina, cultivo, otros).
+ * - Permite redirigir a editar/eliminar recursos.
+ * @dependencies
+ * - Angular Material: Radio, Button, Card, Icon, Dialog
+ * - Servicios: ResourceApiService, BreederApiService
+ * - Componentes: Header, Sidenav, ConfirmationDialog
+ * @author Johan Moreno
+ * @created 2025-05-14
+ */
+
+
 @Component({
   selector: 'app-my-farm-resource-management',
   standalone: true,

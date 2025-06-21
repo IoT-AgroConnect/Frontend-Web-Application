@@ -1,3 +1,30 @@
+/**
+ * @component PublicationsViewComponent
+ * @description
+ * Componente encargado de mostrar todas las publicaciones realizadas por asesores.
+ * Utiliza un componente de tarjeta en modo solo lectura para cada publicación y
+ * una vista vacía si no hay resultados disponibles.
+ *
+ * @features
+ * - Llama al servicio para obtener todas las publicaciones
+ * - Renderiza cada publicación usando `PublicationReadonlyCardComponent`
+ * - Muestra `EmptyViewComponent` si no hay publicaciones
+ *
+ * @dependencies
+ * - Services:
+ *    - PublicationsApiService
+ * - Components:
+ *    - PublicationReadonlyCardComponent
+ *    - EmptyViewComponent
+ * - Angular Router
+ * - Angular Directivas:
+ *    - NgIf
+ *    - NgForOf
+ *
+ * @author Nadia Lucas
+ * @created 2025-05-14
+ */
+
 import { Component, OnInit } from '@angular/core';
 import {NgForOf, NgIf} from "@angular/common";
 import {Publication} from "../../models/publication.model";
