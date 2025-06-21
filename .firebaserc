@@ -1,14 +1,5 @@
 {
-  "targets": {
-    "agroconnect-demo": {
-      "hosting": {
-        "frontend-web-applications": [
-          "agroconnect-demo"
-        ]
-      }
-    }
-  },
   "projects": {
-    "default": "agroconnect-demo"
+    "default": "agroconnect-demo-55dae"
   }
 }

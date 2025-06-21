@@ -1,17 +1,10 @@
 {
-  "hosting": [
-    {
-      "target": "frontend-web-applications",
-      "public": "dist/frontend-web-applications/browser",
-      "frameworksBackend": {
-        "region": "us-central1"
-      },
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
-      ]
-    }
-  ]
+  "hosting": {
+    "public": "dist/frontend-web-applications/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
 }
