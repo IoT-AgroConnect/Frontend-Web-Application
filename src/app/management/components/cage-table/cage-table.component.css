@@ -102,3 +102,13 @@ table {
     margin-bottom: 5px;
   }
 }
+.actions button[color="accent"] {
+  background-color: #4FC3F7 !important; /* celeste */
+  color: white;
+}
+
+/* Cambiar color solo al botón IoT */
+.iot-monitoring-btn {
+  background-color: #4FC3F7 !important; /* celeste */
+  color: white;
+}

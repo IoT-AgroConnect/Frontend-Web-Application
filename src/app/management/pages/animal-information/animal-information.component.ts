@@ -17,6 +17,7 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 import {MatIcon} from "@angular/material/icon";
 import {MatOption, MatSelect} from "@angular/material/select";
 import {BreederApiService} from "../../../user/services/breeder-api.service";
+import { CommonModule } from '@angular/common';
 
 
 @Component({
@@ -33,7 +34,8 @@ import {BreederApiService} from "../../../user/services/breeder-api.service";
     MatIcon,
     MatSelect,
     MatOption,
-    NgIf
+    NgIf,
+    CommonModule
   ],
   templateUrl: './animal-information.component.html',
   styleUrl: './animal-information.component.css'

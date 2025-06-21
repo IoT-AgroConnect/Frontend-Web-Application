@@ -39,6 +39,13 @@
           <mat-icon>delete</mat-icon>
           <span class="button-text">Borrar</span>
         </button>
+        <button mat-flat-button class="iot-monitoring-btn" (click)="goToMonitoring.emit(element.id)">
+          <mat-icon>sensor_window</mat-icon>
+          <span class="button-text">IoT</span>
+        </button>
+
+
+
       </td>
     </ng-container>
 

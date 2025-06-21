@@ -3,6 +3,7 @@ import { MatButton } from "@angular/material/button";
 import { MatTableModule, MatTableDataSource } from "@angular/material/table";
 import { MatPaginator } from "@angular/material/paginator";
 import { MatIcon } from "@angular/material/icon";
+import { RouterModule } from '@angular/router';
 
 /**
  * @component CageTableComponent
@@ -30,7 +31,8 @@ import { MatIcon } from "@angular/material/icon";
     MatButton,
     MatTableModule,
     MatPaginator,
-    MatIcon
+    MatIcon,
+    RouterModule // ✅ <-- ESTA LÍNEA FALTABA
   ],
   templateUrl: './cage-table.component.html',
   styleUrl: './cage-table.component.css'
@@ -47,5 +49,7 @@ export class CageTableComponent {
   @Output() editCage = new EventEmitter<number>();
   @Output() deleteCage = new EventEmitter<number>();
   @Output() goToCage = new EventEmitter<number>();
+  @Output() goToMonitoring = new EventEmitter<number>();
+
 
 }

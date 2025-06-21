@@ -1,0 +1,18 @@
+<div class="monitoring-container">
+  <div class="sensor-grid">
+    <div class="sensor-card" *ngFor="let sensor of sensorCards" [ngStyle]="{ 'background-color': sensor.bg }">
+      <h3>{{ sensor.label }} <mat-icon>{{ sensor.icon }}</mat-icon></h3>
+      <p><strong>Valor:</strong> {{ sensor.value }}</p>
+      <p><strong>Estado:</strong> {{ sensor.status }}</p>
+    </div>
+  </div>
+
+  <div class="device-status">
+    <h3>Dispositivos activos</h3>
+    <div class="device-list">
+      <div class="device" *ngFor="let device of deviceStatus">
+        <mat-icon>settings_input_antenna</mat-icon> {{ device }}
+      </div>
+    </div>
+  </div>
+</div>
